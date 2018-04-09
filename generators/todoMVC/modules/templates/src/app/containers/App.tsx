@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {IDispatch} from '~react-redux~redux';
+import {Dispatch} from 'redux';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import Header from '../components/Header';
@@ -7,8 +7,8 @@ import MainSection from '../components/MainSection';
 import {addTodo, deleteTodo, editTodo, completeTodo, completeAll, clearCompleted} from '../actions/index';
 
 interface IAppProps {
-  todos?: any[];
-  actions?: any;
+  todos: any[];
+  actions: any;
 }
 
 interface IAppState {}
@@ -41,7 +41,7 @@ function mapStateToProps(state: any) {
   };
 }
 
-function mapDispatchToProps(dispatch: IDispatch) {
+function mapDispatchToProps(dispatch: Dispatch<any>) {
   return {
     actions: bindActionCreators({
       addTodo,

@@ -90,7 +90,7 @@ class MainSection extends React.Component<IMainProps, IMainState> {
       <section className='main'>
         {this.renderToggleAll(completedCount)}
         <ul className='todo-list'>
-          {filteredTodos.map(todo =>
+          {filteredTodos.map((todo: any) =>
             <TodoItem
               key={todo.id}
               todo={todo}
